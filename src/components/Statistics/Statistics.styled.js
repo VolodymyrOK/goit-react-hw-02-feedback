@@ -1,33 +1,30 @@
 import styled from 'styled-components';
 
+export const StatList = styled.ul`
+  width: 100%;
+`;
 export const Paragraph = styled.li`
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 12px;
-  &:nth-child(1) > span {
-    margin-left: 12px;
-    color: green;
+  & > span {
     font-size: 24px;
+    margin-left: 25px;
+  }
+  &:nth-child(1) > span {
+    color: ${({ theme: { colors } }) => colors.colorGood};
   }
   &:nth-child(2) > span {
-    margin-left: 12px;
-    color: orange;
-    font-size: 24px;
+    color: ${({ theme: { colors } }) => colors.colorNeutral};
   }
   &:nth-child(3) > span {
-    margin-left: 12px;
-    color: red;
-    font-size: 24px;
+    color: ${({ theme: { colors } }) => colors.colorBad};
   }
   &:nth-child(4) > span {
-    margin-left: 12px;
-    color: blue;
-    font-size: 24px;
+    color: ${({ theme: { colors } }) => colors.colorTotal};
   }
   &:nth-child(5) > span {
-    margin-left: 12px;
-    color: teal;
-    font-size: 24px;
+    color: ${({ theme: { colors } }) => colors.colorPercent};
   }
 `;
 
@@ -38,8 +35,11 @@ export const ButtonReload = styled.button`
   padding: 4px 12px;
   cursor: pointer;
   transition: color 250ms ease-in, background-color 250ms ease-in;
+  box-shadow: 4px 4px 13px 0px rgba(17, 17, 17, 0.75);
+  -webkit-box-shadow: 4px 4px 13px 0px rgba(17, 17, 17, 0.75);
+  -moz-box-shadow: 4px 4px 13px 0px rgba(17, 17, 17, 0.75);
   &:is(:hover, :focus) {
     color: white;
-    background-color: red;
+    background-color: ${({ theme: { colors } }) => colors.colorNote};
   }
 `;

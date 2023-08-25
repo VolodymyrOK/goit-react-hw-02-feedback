@@ -45,8 +45,6 @@ export class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const total = this.countTotalFeedback();
-    console.log(total);
     return (
       <Layout>
         <Section title="Please leave feedback">
@@ -56,7 +54,7 @@ export class App extends Component {
           />
         </Section>
         <Section title="Statistics">
-          {total ? (
+          {this.countTotalFeedback() ? (
             <Statistics
               good={good}
               neutral={neutral}

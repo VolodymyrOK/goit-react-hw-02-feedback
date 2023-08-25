@@ -1,4 +1,4 @@
-import { ButtonReload, Paragraph } from './Statistics.styled';
+import { ButtonReload, Paragraph, StatList } from './Statistics.styled';
 
 export const Statistics = ({
   good,
@@ -9,7 +9,7 @@ export const Statistics = ({
   onReload,
 }) => (
   <>
-    <ul>
+    <StatList>
       <Paragraph>
         Good:<span>{good}</span>
       </Paragraph>
@@ -27,7 +27,7 @@ export const Statistics = ({
         Positive feedback:
         <span>{positivePercentage()}%</span>
       </Paragraph>
-    </ul>
+    </StatList>
     <ButtonReload onClick={onReload}>Reload page</ButtonReload>
   </>
 );
