@@ -8,6 +8,10 @@ export const StatListItem = styled.li`
   font-weight: 500;
   margin-bottom: 12px;
   text-transform: capitalize;
+  transition: scale 150ms ease-in;
+  &:active {
+    scale: 0.95;
+  }
   & > span {
     font-size: 24px;
     margin-left: 25px;
@@ -35,16 +39,16 @@ export const ButtonReload = styled.button`
   border-radius: 4px;
   padding: 4px 12px;
   cursor: pointer;
-  transition: color 250ms ease-in, background-color 250ms ease-in;
+  transition: color 150ms ease-in, background-color 150ms ease-in,
+    scale 150ms ease-in;
   box-shadow: 4px 4px 13px 0px rgba(17, 17, 17, 0.75);
   -webkit-box-shadow: 4px 4px 13px 0px rgba(17, 17, 17, 0.75);
   -moz-box-shadow: 4px 4px 13px 0px rgba(17, 17, 17, 0.75);
+  &:active {
+    scale: 0.95;
+  }
   &:is(:hover, :focus) {
     color: white;
     background-color: ${({ theme: { colors } }) => colors.colorNote};
-  }
-  transition: scale 150ms ease-in;
-  &:active {
-    scale: 0.95;
   }
 `;
