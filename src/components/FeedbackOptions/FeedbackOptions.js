@@ -1,4 +1,4 @@
-import { Button, ButtonList, ButtonListItem } from './FeedbackOptions.styles';
+import { Button, ButtonList, ButtonListItem } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onFeedBack }) => (
   <ButtonList>
