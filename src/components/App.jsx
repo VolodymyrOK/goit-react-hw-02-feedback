@@ -17,7 +17,7 @@ export class App extends Component {
     window.location.reload();
   };
 
-  onFeedback = evt => {
+  onLeaveFeedback = evt => {
     this.setState(prevState => {
       switch (evt.target.textContent) {
         case 'good':
@@ -49,7 +49,10 @@ export class App extends Component {
     return (
       <Layout>
         <Section title="Please leave feedback">
-          <FeedbackOptions options={options} onFeedBack={this.onFeedback} />
+          <FeedbackOptions
+            options={options}
+            onLeaveFeedBack={this.onLeaveFeedback}
+          />
         </Section>
         <Section title="Statistics">
           {this.countTotalFeedback() ? (
