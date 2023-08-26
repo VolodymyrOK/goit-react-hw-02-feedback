@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const StatList = styled.ul`
   width: 100%;
 `;
-export const Paragraph = styled.li`
+export const StatListItem = styled.li`
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 12px;
+  text-transform: capitalize;
   & > span {
     font-size: 24px;
     margin-left: 25px;
@@ -41,5 +42,9 @@ export const ButtonReload = styled.button`
   &:is(:hover, :focus) {
     color: white;
     background-color: ${({ theme: { colors } }) => colors.colorNote};
+  }
+  transition: scale 150ms ease-in;
+  &:active {
+    scale: 0.95;
   }
 `;

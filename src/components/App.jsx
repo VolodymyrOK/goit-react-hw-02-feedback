@@ -44,21 +44,17 @@ export class App extends Component {
   };
 
   render() {
-    const { good, neutral, bad } = this.state;
+    const options = Object.keys(this.state);
+    const entries = Object.entries(this.state);
     return (
       <Layout>
         <Section title="Please leave feedback">
-          <FeedbackOptions
-            options={['good', 'neutral', 'bad']}
-            onFeedBack={this.onFeedback}
-          />
+          <FeedbackOptions options={options} onFeedBack={this.onFeedback} />
         </Section>
         <Section title="Statistics">
           {this.countTotalFeedback() ? (
             <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
+              entries={entries}
               total={this.countTotalFeedback}
               positivePercentage={this.countPositiveFeedbackPercentage}
               onReload={this.onReload}

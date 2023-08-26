@@ -10,6 +10,10 @@ export const ButtonListItem = styled.li`
   box-shadow: 4px 4px 13px 0px rgba(17, 17, 17, 0.75);
   -webkit-box-shadow: 4px 4px 13px 0px rgba(17, 17, 17, 0.75);
   -moz-box-shadow: 4px 4px 13px 0px rgba(17, 17, 17, 0.75);
+  transition: scale 150ms ease-in;
+  &:active {
+    scale: 0.95;
+  }
   &:nth-child(1) button {
     border: 1px solid ${({ theme: { colors } }) => colors.colorGood};
     &:is(:hover, :focus) {
