@@ -7,29 +7,25 @@ import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 
+const initialState = {
+  good: 0,
+  neutral: 0,
+  bad: 0,
+};
+
 export class App extends Component {
   state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
+    ...initialState,
   };
 
   onReload = () => {
-    window.location.reload();
+    // window.location.reload();
+    this.setState({ ...initialState });
   };
 
-  onLeaveFeedback = evt => {
+  onLeaveFeedback = option => {
     this.setState(prevState => {
-      switch (evt.target.textContent) {
-        case 'good':
-          return { good: prevState.good + 1 };
-        case 'neutral':
-          return { neutral: prevState.neutral + 1 };
-        case 'bad':
-          return { bad: prevState.bad + 1 };
-        default:
-          return { prevState };
-      }
+      return { [option]: prevState[option] + 1 };
     });
   };
 
