@@ -23,7 +23,7 @@ export const Statistics = ({
         <span>{positivePercentage()}%</span>
       </StatListItem>
     </StatList>
-    <ButtonReload onClick={onReload}>Reload page</ButtonReload>
+    <ButtonReload onClick={onReload}>Reset</ButtonReload>
   </>
 );
 
