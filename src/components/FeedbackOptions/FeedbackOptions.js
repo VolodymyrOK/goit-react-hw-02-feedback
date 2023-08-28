@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Button, ButtonList, ButtonListItem } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedBack }) => (
@@ -11,3 +12,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedBack }) => (
     ))}
   </ButtonList>
 );
+
+Button.propTypes = {
+  onClick: PropTypes.func,
+};

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ButtonReload, StatList, StatListItem } from './Statistics.styled';
 
 export const Statistics = ({
@@ -25,3 +26,7 @@ export const Statistics = ({
     <ButtonReload onClick={onReload}>Reload page</ButtonReload>
   </>
 );
+
+ButtonReload.propTypes = {
+  onClick: PropTypes.func,
+};
