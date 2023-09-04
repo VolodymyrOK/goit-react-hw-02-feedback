@@ -27,6 +27,9 @@ export const Statistics = ({
   </>
 );
 
-ButtonReload.propTypes = {
-  onClick: PropTypes.func,
+Statistics.propTypes = {
+  entries: PropTypes.array,
+  total: PropTypes.func,
+  positivePercentage: PropTypes.func,
+  onReload: PropTypes.func,
 };

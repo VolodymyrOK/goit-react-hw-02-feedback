@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { GlobalStyle } from 'styles/GlobalStyles';
 import { Layout } from 'styles/Layout';
 import { Component } from 'react';
@@ -68,19 +67,3 @@ export class App extends Component {
     );
   }
 }
-
-FeedbackOptions.propTypes = {
-  options: PropTypes.array,
-  onLeaveFeedBack: PropTypes.func,
-};
-
-Statistics.propTypes = {
-  entries: PropTypes.array,
-  total: PropTypes.func,
-  positivePercentage: PropTypes.func,
-  onReload: PropTypes.func,
-};
-
-Notification.propTypes = {
-  message: PropTypes.string,
-};

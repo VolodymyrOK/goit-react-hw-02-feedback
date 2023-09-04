@@ -13,6 +13,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedBack }) => (
   </ButtonList>
 );
 
-Button.propTypes = {
-  onClick: PropTypes.func,
+FeedbackOptions.propTypes = {
+  options: PropTypes.array,
+  onLeaveFeedBack: PropTypes.func,
 };
